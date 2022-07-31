@@ -133,7 +133,7 @@ public class EmployerManager implements EmployerService{
 	
 	private Result companyNameChecker(Employer employer) {
 		
-		if(employer.getCompanyName().isBlank() || employer.getCompanyName() == null) {
+		if(employer.getCompanyName() == null) {
 			return new ErrorResult(Messages.requiredCompanyName);
 		}
 		return new SuccessResult();
@@ -141,7 +141,7 @@ public class EmployerManager implements EmployerService{
 	
    private Result webAddressChecker(Employer employer) {
 		
-		if(employer.getWebAddress().isBlank() || employer.getWebAddress() == null) {
+		if(employer.getWebAddress() == null) {
 			return new ErrorResult(Messages.requiredWebAddress);
 		}
 		return new SuccessResult();
@@ -149,7 +149,7 @@ public class EmployerManager implements EmployerService{
    
    private Result emailChecker(Employer employer) {
 		
-		if(employer.getEmail().isBlank() || employer.getEmail() == null) {
+		if(employer.getEmail() == null) {
 			return new ErrorResult(Messages.requiredEmail);
 		}
 		return new SuccessResult();
@@ -157,7 +157,7 @@ public class EmployerManager implements EmployerService{
    
    private Result passwordChecker(Employer employer) {
 		
-		if(employer.getPassword().isBlank() || employer.getPassword() == null) {
+		if(employer.getPassword() == null) {
 			return new ErrorResult(Messages.requiredPassword);
 		}
 		return new SuccessResult();

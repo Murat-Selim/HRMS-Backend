@@ -67,14 +67,14 @@ public class CandidateManager implements CandidateService{
   }
 	
 	private Result firstNameChecker(Candidate candidate) {
-		if(candidate.getFirstName().isBlank() || candidate.getFirstName() == null) {
+		if(candidate.getFirstName() == null) {
 			return new ErrorResult(Messages.requiredFirstName);
 		}
 		return new SuccessResult();
 	}
 	
 	private Result lastNameChecker(Candidate candidate) {
-		if(candidate.getLastName().isBlank() || candidate.getLastName() == null) {
+		if(candidate.getLastName() == null) {
 			return new ErrorResult(Messages.requiredLastName);
 		}
 		return new SuccessResult();
@@ -89,21 +89,21 @@ public class CandidateManager implements CandidateService{
     }
 	
 	private Result emailChecker(Candidate candidate) {
-		if(candidate.getEmail().isBlank() || candidate.getEmail() == null) {
+		if(candidate.getEmail() == null) {
 			return new ErrorResult(Messages.requiredEmail);
 		}
 		return new SuccessResult();
     }
 	
 	private Result identityChecker(Candidate candidate) {
-		if(candidate.getIdentityNumber().isBlank() || candidate.getIdentityNumber() == null) {
+		if(candidate.getIdentityNumber() == null) {
 			return new ErrorResult(Messages.requiredIdentity);
 		}
 		return new SuccessResult();
     }
 	
 	private Result passwordChecker(Candidate candidate) {
-		if(candidate.getPassword().isBlank() || candidate.getIdentityNumber() == null) {
+		if(candidate.getIdentityNumber() == null) {
 			return new ErrorResult(Messages.requiredPassword);
 		}
 		return new SuccessResult();
